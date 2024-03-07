@@ -1,0 +1,53 @@
+.tabelaContent{
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.tCard{
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    background-color: #cbd5e1;
+    color: #0f172a;
+    text-align: center;
+}
+
+.cardTitulo{
+    background-color: #fb923c;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cardList{
+    padding: 0 10px;
+}
+
+@media (max-width:991px){
+    .tabelaContent{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:700px) {
+    .tabelaContent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:500px) {
+    .tabelaContent{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
