@@ -1,26 +1,25 @@
 'use client'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { db } from "../../utils/firestore"
 import { addDoc, collection } from "firebase/firestore"
-import MainMenu from "@/components/menu"
 import Tabela from "@/components/Tabela"
+import useSWR from "swr"
+import Dia from "@/components/Dia"
+
+const fetcher = async (url) => {
+  const response = await fetch(url)
+  return response.json()
+}
 
 export default function Home() {
+  const { mutate } = useSWR('/api/jobs', fetcher)
   const [nomeJob, setNomeJob] = useState({
     nomeDoJob: '',
     responsavelJob: '',
     timeStamp: null,
   })
 
-  const [data, setData] = useState('')
-
-  useEffect(() => {
-    const handleData = () => {
-    const currentData = new Date().toLocaleDateString('pt-BR')
-    setData(currentData)
-  }
-  handleData()
-  }, [])
+  const [reloadTable, setReloadTable] = useState(false)
 
   const handleJob = async (e) => {
     e.preventDefault()
@@ -35,6 +34,9 @@ export default function Home() {
       nomeDoJob: '',
       responsavelJob: '',
     })
+
+    mutate()
+    setReloadTable(true)
   }
 
 
@@ -66,9 +68,9 @@ export default function Home() {
           />
         </form>
         <div>
-          Pauta Dia: {data}
+          <Dia />
         </div>
-        <Tabela />
+        <Tabela key={reloadTable ? 'reload' : 'no-reload'} />
       </div>
     </>
   )
