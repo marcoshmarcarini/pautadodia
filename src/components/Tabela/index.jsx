@@ -194,8 +194,18 @@ export default function Tabela() {
   }
 
   const handleDeleteJob = async (job) => {
-    const jobDeleteRef = doc(db, 'jobs', job.id)
-    await deleteDoc(jobDeleteRef)
+    try {
+      const jobDeleteRef = doc(db, 'jobs', job.id)
+      await deleteDoc(jobDeleteRef)
+      // Atualiza a tabela
+      fetchData();
+
+      // Recarrega a tabela
+      mutate();
+    } catch (error) {
+      console.error('Erro ao excluir o job:', error);
+    }
+
   }
 
 
