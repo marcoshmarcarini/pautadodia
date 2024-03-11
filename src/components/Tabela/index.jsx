@@ -205,7 +205,6 @@ export default function Tabela() {
     } catch (error) {
       console.error('Erro ao excluir o job:', error);
     }
-
   }
 
 
@@ -734,6 +733,5 @@ export default function Tabela() {
         </div>
       </div>
     </>
-
   )
 }

@@ -10,7 +10,11 @@ const nextConfig = {
         pathname: '/**',
       }
     ]
-  }
+  },
+  babel: {
+    presets:["next/babel"],
+    plugins: [],
+  },
 };
 
 export default nextConfig;
