@@ -108,6 +108,7 @@ export default function ViewJob({ jobs, updateJob, haveNewJob }: ViewJobProps) {
                                             width={30}
                                             height={30}
                                             alt="Atualizar"
+                                            className={styles.atualizarIcon}
                                         />
                                     </button>
                                     <button
@@ -120,6 +121,7 @@ export default function ViewJob({ jobs, updateJob, haveNewJob }: ViewJobProps) {
                                             width={30}
                                             height={30}
                                             alt="Concluído"
+                                            className={styles.concluirIcon}
                                         />
                                     </button>
                                     <button
@@ -132,6 +134,7 @@ export default function ViewJob({ jobs, updateJob, haveNewJob }: ViewJobProps) {
                                             width={30}
                                             height={30}
                                             alt="Delete"
+                                            className={styles.deletarIcon}
                                         />
                                     </button>
                                 </form>
