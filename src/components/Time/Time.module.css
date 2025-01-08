@@ -1,0 +1,22 @@
+.time{
+    font-size: 2rem;
+    color: var(--purple-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+}
+
+.time::before{
+    content: "";
+    background: var(--green-1);
+    display: flex;
+    position: absolute;
+    padding: 15px 20px;
+    transform: rotate(-3deg);
+    z-index: -1;
+    width: 150px;
+    height: 60px;
+}

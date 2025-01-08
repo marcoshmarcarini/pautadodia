@@ -1,0 +1,133 @@
+.jobContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  align-items: start;
+  padding: 50px 20px;
+}
+
+.jobCard {
+  border: 1px solid var(--orange-3);
+  height: auto;
+  flex-direction: column;
+  min-width: max-content;
+  margin-bottom: 20px;
+  border: 1px solid #f07507;
+  box-shadow: 3px 3px 8px #fbe2cc;
+}
+
+.jobList {
+  background-color: var(--orange-4);
+  flex: 1 1 auto;
+}
+
+.jobForm {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+}
+
+.jobInput {
+  max-width: 400px;
+  width: 100%;
+  background-color: var(--orange-4);
+}
+
+.responsavel {
+  background-color: var(--orange-1);
+  color: var(--background);
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.atualizarButton {
+  background-color: var(--purple-3);
+}
+
+.atualizarIcon {
+  padding: 0.25rem;
+}
+
+.atualizarIcon:hover {
+  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: rotate(360deg);
+}
+
+.concluirButton {
+  background-color: var(--green-1);
+}
+
+.concluirIcon:hover {
+  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(1.1);
+}
+
+.deletarButton {
+  background-color: var(--red-4);
+}
+
+.deletarIcon:hover {
+  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(1.1);
+}
+
+/*  text-decoration: line-through; */
+
+@media (max-width: 1366px) {
+  .jobContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .jobContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .jobContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 660px) {
+  .jobContainer {
+    display: grid;
+    grid-template-columns: 300px;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    padding: 0 20px;
+  }
+}
